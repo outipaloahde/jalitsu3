@@ -197,7 +197,7 @@ var EventForm = function (_React$Component2) {
 
     var _this5 = _possibleConstructorReturn(this, (EventForm.__proto__ || Object.getPrototypeOf(EventForm)).call(this, props));
 
-    _this5.state = { eventName: '', type: '', date: '', time: '' };
+    _this5.state = { eventName: '', type: '', date: '', time: '', place: '' };
     _this5.handleSubmit = _this5.handleSubmit.bind(_this5);
     _this5.handleChange = _this5.handleChange.bind(_this5);
     return _this5;
@@ -217,7 +217,8 @@ var EventForm = function (_React$Component2) {
         eventName: this.state.eventName,
         type: this.state.type,
         date: this.state.date,
-        time: this.state.time
+        time: this.state.time,
+        place: this.state.place
       };
       this.props.createEvent(newEvent);
     }
@@ -258,6 +259,11 @@ var EventForm = function (_React$Component2) {
               'div',
               { className: 'col-md-2' },
               _react2.default.createElement('input', { type: 'text', placeholder: 'Time', className: 'form-control', name: 'time', onChange: this.handleChange })
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'col-md-2' },
+              _react2.default.createElement('input', { type: 'text', placeholder: 'Place', className: 'form-control', name: 'place', onChange: this.handleChange })
             ),
             _react2.default.createElement(
               'div',
@@ -327,6 +333,11 @@ var EventTable = function (_React$Component3) {
                 null,
                 'Time'
               ),
+              _react2.default.createElement(
+                'th',
+                null,
+                'Place'
+              ),
               _react2.default.createElement('th', null)
             ),
             events
@@ -385,6 +396,11 @@ var Event = function (_React$Component4) {
           'td',
           null,
           this.props.event.time
+        ),
+        _react2.default.createElement(
+          'td',
+          null,
+          this.props.event.place
         ),
         _react2.default.createElement(
           'td',

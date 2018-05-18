@@ -1,7 +1,6 @@
 {
   "name": "jalitsu3",
   "version": "1.0.0",
-  "description": "",
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -29,5 +28,6 @@
   "bugs": {
     "url": "https://github.com/outipaloahde/jalitsu3/issues"
   },
-  "homepage": "https://github.com/outipaloahde/jalitsu3#readme"
+  "homepage": "https://github.com/outipaloahde/jalitsu3#readme",
+  "description": ""
 }

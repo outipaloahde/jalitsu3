@@ -22,7 +22,10 @@ public class Jalitsu3Application {
 	public CommandLineRunner eDemo(EventRepository eRepository) {
 		return(args) -> {
 			log.info("save events");
-			eRepository.save(new Event("HIFK-HJK", "Game", "21.5.2018", "20.15", "Pirkkola tn"));
+			eRepository.save(new Event("Crossfit", "Treenit", "18.5.2018", "18.50", "Vetosali"));
+			eRepository.save(new Event("Trenet", "Treenit", "20.5.2018", "20.15", "Väinämöisen kenttä"));
+			eRepository.save(new Event("HIFK-HJK", "Peli", "23.5.2018", "19.00", "Pitäjänmäki tn"));
+			eRepository.save(new Event("Treenit", "Treenit", "27.5.2018", "19.45", "Väinämöisen kenttä"));
 			
 			
 			log.info("fetch all events");

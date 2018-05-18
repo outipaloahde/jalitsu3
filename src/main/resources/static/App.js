@@ -74,7 +74,7 @@ class App extends React.Component {
 class EventForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { eventName: '', type: '', date: '', time: '' };
+    this.state = { eventName: '', type: '', date: '', time: '', place: '' };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
@@ -92,7 +92,8 @@ class EventForm extends React.Component {
       eventName: this.state.eventName,
       type: this.state.type,
       date: this.state.date,
-      time: this.state.time
+      time: this.state.time,
+      place: this.state.place
     }
     this.props.createEvent(newEvent);
   }
@@ -115,6 +116,9 @@ class EventForm extends React.Component {
             </div>
             <div className='col-md-2'>
               <input type='text' placeholder='Time' className='form-control' name='time' onChange={this.handleChange} />
+            </div>
+            <div className='col-md-2'>
+              <input type='text' placeholder='Place' className='form-control' name='place' onChange={this.handleChange} />
             </div>
             <div className='col-md-2'>
               <button className='btn btn-success' onClick={this.handleSubmit}>Save</button>
@@ -142,7 +146,7 @@ class EventTable extends React.Component {
 
           <tbody>
             <tr>
-              <th>Name</th><th>Type</th><th>Date</th><th>Time</th><th></th>
+              <th>Name</th><th>Type</th><th>Date</th><th>Time</th><th>Place</th><th></th>
             </tr>
 
             {events}</tbody>
@@ -174,6 +178,7 @@ class Event extends React.Component {
         <td>{this.props.event.type}</td>
         <td>{this.props.event.date}</td>
         <td>{this.props.event.time}</td>
+        <td>{this.props.event.place}</td>
         <td>
           <button className='btn btn-danger' onClick={this.deleteEvent}>Delete</button>
         </td>

@@ -22,10 +22,8 @@ public class Jalitsu3Application {
 	public CommandLineRunner eDemo(EventRepository eRepository) {
 		return(args) -> {
 			log.info("save events");
-			eRepository.save(new Event("HIFK-HJK", "Game", "21.5.2018", "20.15"));
-			eRepository.save(new Event("HIFK-HJK", "Game", "21.5.2018", "20.15"));
-			eRepository.save(new Event("HIFK-HJK", "Game", "21.5.2018", "20.15"));
-			eRepository.save(new Event("HIFK-HJK", "Game", "21.5.2018", "20.15"));
+			eRepository.save(new Event("HIFK-HJK", "Game", "21.5.2018", "20.15", "Pirkkola tn"));
+			
 			
 			log.info("fetch all events");
 			for (Event event : eRepository.findAll()) {

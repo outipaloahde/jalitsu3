@@ -14,27 +14,38 @@ public class Event {
 	private String type;
 	private String date;
 	private String time;
+	private String place;
 	
 	public Event() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Event(Long eventId, String eventName, String type, String date, String time) {
+	public Event(Long eventId, String eventName, String type, String date, String time, String place) {
 		super();
 		this.eventId = eventId;
 		this.eventName = eventName;
 		this.type = type;
 		this.date = date;
 		this.time = time;
+		this.place = place;
 	}
 	
-	public Event(String eventName, String type, String date, String time) {
+	public String getPlace() {
+		return place;
+	}
+
+	public void setPlace(String place) {
+		this.place = place;
+	}
+
+	public Event(String eventName, String type, String date, String time, String place) {
 		super();
 		this.eventName = eventName;
 		this.type = type;
 		this.date = date;
 		this.time = time;
+		this.place = place;
 	}
 
 	public Long getEventId() {
@@ -80,7 +91,8 @@ public class Event {
 	@Override
 	public String toString() {
 		return "Event [eventId=" + eventId + ", eventName=" + eventName + ", type=" + type + ", date=" + date
-				+ ", time=" + time + "]";
+				+ ", time=" + time + ", place=" + place + "]";
 	}
 
+	
 }
